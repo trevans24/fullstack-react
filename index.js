@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const router = express.Router();
 const PORT = process.env.PORT || 3000;
+const passport = require('passport');
+const Google = require('passport-google-oauth20').Strategy;
 
 // Body Parser for use on response
 app.use(bodyParser.urlencoded({extended: true}));
@@ -11,10 +13,9 @@ app.use(bodyParser.json());
 // Public Views
 app.use(express.static(__dirname + 'public'));
 
-// HTML ENDPOINT
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/index.html');
-// });
+// PASSPORT
+passport.use(new Google());
+
 
 //////// API ROUTES ////////
 // DB ROUTE

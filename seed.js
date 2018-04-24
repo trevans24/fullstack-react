@@ -39,7 +39,7 @@ const carList = [
 // SEEDING THE DB
 db.Car.remove({}, (err, cars) => {
   console.log('removed all cars');
-  db.Car.creat(carList, (err, cars) => {
+  db.Car.create(carList, (err, cars) => {
     if(err) {
       console.log('DB creation err: ', err);
     }

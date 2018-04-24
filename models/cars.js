@@ -8,7 +8,6 @@ const CarSchema = new Schema({
   make: String,
   model: String,
   picture: String,
-  movie: [String]
 });
 
 // MODEL

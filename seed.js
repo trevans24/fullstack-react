@@ -45,7 +45,9 @@ const carList = [
 db.Car.remove({}, (err, cars) => {
   console.log('removed all cars');
   db.Car.creat(carList, (err, cars) => {
-    if(err) => console.log('DB creation err: ', err);
+    if(err) {
+      console.log('DB creation err: ', err);
+    }
     console.log('Created Cars DB!');
     process.exit();
   });

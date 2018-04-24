@@ -12,7 +12,7 @@ const CarSchema = new Schema({
 });
 
 // MODEL
-let Car = mongoose.Schema('Car', CarSchema);
+const Car = mongoose.model('Car', CarSchema);
 
 // EXPORT
 module.exports = Car;

@@ -12,9 +12,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + 'public'));
 
 // HTML ENDPOINT
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
-});
+// app.get('/', (req, res) => {
+//   res.sendFile(__dirname + '/index.html');
+// });
 
 //////// API ROUTES ////////
 // DB ROUTE

@@ -23,7 +23,9 @@ const db = require('./models');
 app.get('/api', (req, res) => {
   db.Car.find()
   .exec((err, cars) => {
-    if(err) => console.log("get error: ", err);
+    if(err) {
+      console.log("get error: ", err);
+    }
     res.json(cars);
   });
 });

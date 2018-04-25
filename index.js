@@ -16,7 +16,6 @@ app.use(express.static(__dirname + 'public'));
 // PASSPORT
 passport.use(new Google());
 
-
 //////// API ROUTES ////////
 // DB ROUTE
 const db = require('./models');
